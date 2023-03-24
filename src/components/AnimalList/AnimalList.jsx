@@ -1,7 +1,7 @@
 import React from 'react'
 import { Animal } from './../Animal'
 
-export const AnimalList = ({ animals }) => {
+export const AnimalList = ({ animals, onSelected }) => {  
     return (
         <div>
             {animals.map((animal) => 
@@ -10,6 +10,7 @@ export const AnimalList = ({ animals }) => {
                 image={animal.foto} 
                 name={animal.nazev} 
                 latin={animal.nazevLatinsky}
+                onSelected={onSelected}
                 />
             )}
         </div>
