@@ -5,9 +5,9 @@ import { AnimalDetail } from './components/AnimalDetail';
 import './style.css';
 
 const App = () => {
-  const [animals, setAnimals] = useState('')
+  const [animals, setAnimals] = useState([])
   const [selectedAnimal, setSelectedAnimal] = useState(null)
-  const [zoo, setZoo] = useState('') //array
+  const [zoo, setZoo] = useState([]) //array
  
   useEffect(() => {
 
