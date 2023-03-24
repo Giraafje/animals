@@ -1,7 +1,7 @@
 import React from 'react'
 import './animalDetail.css'
 
-export const AnimalDetail = ({ name, latin, image, description, home, biotop, food, size }) => {
+export const AnimalDetail = ({ name, latin, image, description, home, biotop, food, size, zoo }) => {
     return (
         <div className="detail">
 			<div className="detail__content">
@@ -39,11 +39,11 @@ export const AnimalDetail = ({ name, latin, image, description, home, biotop, fo
 					</div>
 
 					<div className="detail__zoo">
-						<h3>Najdete v těchto ZOO</h3>
-						<p>Praha, Dvůr Králové, Olomouc</p>
+						<h3>Najdete je v těchto ZOO</h3>
+						<ul>{zoo.map((z) => <li key={z}>{z}</li>)}</ul>
 					</div>
 				</div>
-                
+
 			</div>
 		</div>
     )
